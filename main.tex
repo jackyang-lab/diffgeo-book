@@ -1,0 +1,49 @@
+% !TeX program = xelatex
+% !TeX encoding = UTF-8
+% main.tex
+
+\documentclass[12pt,a4paper,oneside,openany]{book}
+
+% 引入全局设置
+\input{preamble.tex}
+
+\begin{document}
+	
+	% ================= 标题页 =================
+	\title{
+		\Huge\textbf{微分几何基本概念导引}\\[0.6em]
+		\Large\color{gray}{对象·关系·结构·表示}
+	}
+	\author{杨泽}
+	\date{\today}
+	
+	\maketitle
+	
+	% ================= 目录 =================
+	\tableofcontents
+	\clearpage
+	
+	% ================= 正文部分 =================
+	% 第一章：点与坐标（教学起点）
+	\input{chapters/ch01-points-coords}
+	
+	% 第二章：映射与曲线
+	\input{chapters/ch02-maps-curves}
+	
+	% 第三章：切空间与导子（后续）
+	% \input{chapters/ch03-tangent-derivation}
+	
+	% 第四章：余切与对偶
+	% \input{chapters/ch04-cotangent-dual}
+	
+	% 第五章：张量与变换
+	% \input{chapters/ch05-tensors-transform}
+	
+	% 第六章：度量与 Jacobian
+	% \input{chapters/ch06-metric-jacobian}
+	
+	% ================= 附录 =================
+	\appendix
+	% \input{chapters/appendix-notation}
+	
+\end{document}

@@ -1,0 +1,96 @@
+% ==========================================
+% preamble.tex
+% 微分几何基本概念导引 —— 全局导言区
+% ==========================================
+
+% -------- 中文与字体 --------
+\usepackage[UTF8,scheme=chinese]{ctex}
+
+% -------- 页面布局 --------
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	left=2.5cm,
+	right=2.5cm,
+	top=2.5cm,
+	bottom=3cm
+}
+
+% -------- 数学基础 --------
+\usepackage{amsmath,amssymb,amsthm,mathrsfs,bm,dsfont}
+
+% -------- 图形与绘图 --------
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,calc,positioning,fit,matrix,3d,backgrounds}
+
+% -------- 表格与列表 --------
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{enumitem}
+
+% -------- 颜色与高亮盒子 --------
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable,theorems}
+
+\definecolor{deepblue}{RGB}{0,51,102}
+\definecolor{softgray}{RGB}{245,245,245}
+\definecolor{warnred}{RGB}{180,0,0}
+
+% 认知陷阱盒子
+\newtcolorbox{cognitivebox}{
+	colback=softgray, colframe=deepblue,
+	fonttitle=\bfseries, title=认知陷阱, breakable
+}
+% 核心洞察盒子
+\newtcolorbox{insightbox}{
+	colback=white, colframe=warnred,
+	fonttitle=\bfseries, title=核心洞察, breakable
+}
+
+% -------- 定理类环境 --------
+\newtheorem{theorem}{定理}[chapter]
+\newtheorem{lemma}[theorem]{引理}
+\newtheorem{proposition}[theorem]{命题}
+\newtheorem{corollary}[theorem]{推论}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{定义}
+\newtheorem{example}[theorem]{例}
+\newtheorem{exercise}[theorem]{习题}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{注}
+\newtheorem*{intuition}{直觉}
+
+% -------- 自定义数学命令 --------
+% 微分形式
+\newcommand{\dform}[1]{\mathrm{d}#1}
+% 偏导数
+\newcommand{\pder}[2]{\frac{\partial #1}{\partial #2}}
+% 在点 p 处的取值
+\newcommand{\atp}[1]{\left.#1\right|_p}
+% 对偶配对
+\newcommand{\dualpair}[2]{\left\langle #1,#2\right\rangle}
+% 切空间
+\newcommand{\tospace}[1]{T_{#1}M}
+% 余切空间
+\newcommand{\cotspace}[1]{T^*_{#1}M}
+% 光滑函数环
+\newcommand{\Cinf}[1]{C^\infty(#1)}
+% 度量
+\newcommand{\metric}{g}
+
+% -------- 超链接（通常放在最后） --------
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=deepblue,
+	citecolor=deepblue,
+	urlcolor=deepblue,
+	pdftitle={微分几何基本概念导引：对象·关系·结构·表示},
+	pdfauthor={你的名字}
+}

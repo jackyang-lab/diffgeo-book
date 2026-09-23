@@ -1,0 +1,61 @@
+% chapters/ch01-points-coords.tex
+
+\chapter{点与坐标：第一次认知手术}
+
+\begin{intuition}
+	初学者看到极坐标 $(r,\theta)$ 时，大脑会自动把它们理解成“半径”和“角度”。
+	这种直觉有用，但也可能遮蔽坐标本身的结构。
+	本章先把“点”和“坐标表示”严格区分开来。
+\end{intuition}
+
+\section{流形上的点}
+
+设 $M$ 是一个微分流形，$p \in M$ 是流形上的一个几何点。
+在引入任何坐标之前，点 $p$ 本身就是客观存在的几何对象。
+
+\begin{definition}[几何点]
+	流形 $M$ 中的元素 $p$ 称为一个\emph{点}。它不依赖于任何坐标系。
+\end{definition}
+
+\section{坐标图与三层表示}
+
+为了对点进行计算，我们需要将其“翻译”成数字。
+标准微分几何中，坐标图通常直接写作：
+\[
+\varphi: U \subset M \to \mathbb{R}^n.
+\]
+
+本书为了教学清晰，引入一个辅助分解（\textbf{注意：这是教学框架，不是标准定义的强制改写}）：
+\[
+M \xrightarrow{\varphi} X \xrightarrow{\rho} \mathbb{R}^n
+\]
+其中：
+\begin{itemize}
+	\item $p \in M$ 是原始几何点；
+	\item $p' = \varphi(p) \in X$ 是计算空间中的对应点；
+	\item $\rho(p') = (x^1, \ldots, x^n)$ 是其坐标分量。
+\end{itemize}
+
+\begin{remark}
+	当你阅读其他标准教材时，通常只看到 $\varphi: U \to \mathbb{R}^n$。
+	本书的 $X$ 层是为了帮你建立“点 $\to$ 计算对象 $\to$ 数字”的认知层次，
+	不要误以为所有微分几何教材都必须包含这个中间层。
+\end{remark}
+
+\section{极坐标示例}
+
+考虑 $\mathbb{R}^2$ 中的点 $p$。
+极坐标映射 $\varphi$ 将其对应到 $(r,\theta)$，其中：
+\[
+x = r\cos\theta,\quad y = r\sin\theta.
+\]
+
+\begin{example}
+	点 $p$ 在极坐标下表示为 $(r,\theta) = (1, \pi/4)$。
+	这里 $(1, \pi/4)$ 是坐标表示，不是点本身。
+\end{example}
+
+\begin{exercise}
+	在球坐标系中，点 $p$ 的坐标表示为 $(r,\theta,\phi)$。
+	写出从球坐标到笛卡尔坐标的映射 $\rho$ 的具体公式。
+\end{exercise}
